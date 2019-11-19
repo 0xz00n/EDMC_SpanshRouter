@@ -568,9 +568,9 @@ class SpanshRouter():
             response = requests.get(version_url, timeout=2)
             
             if response.status_code == 200:
-                if self.plugin_version != response.content:
+                if self.plugin_version != response.text:
                     self.update_available = True
-                    self.spansh_updater = SpanshUpdater(response.content, self.plugin_dir)
+                    self.spansh_updater = SpanshUpdater(response.text, self.plugin_dir)
                     
             else:
                 sys.stderr.write("Could not query latest SpanshRouter version: " + str(response.status_code) + response.text)

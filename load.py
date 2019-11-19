@@ -2,7 +2,7 @@ from SpanshRouter import SpanshRouter
 
 spansh_router = None
 
-def plugin_start(plugin_dir):
+def plugin_start3(plugin_dir):
     # Check for newer versions
     global spansh_router
     spansh_router = SpanshRouter(plugin_dir)
