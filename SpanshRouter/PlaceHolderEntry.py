@@ -1,7 +1,7 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 
-from Tkinter import *
-from PlaceHolder import PlaceHolder
+from tkinter import *
+from .PlaceHolder import PlaceHolder
 
 class PlaceHolderEntry(Entry, PlaceHolder):
     def __init__(self, parent, placeholder, **kw):

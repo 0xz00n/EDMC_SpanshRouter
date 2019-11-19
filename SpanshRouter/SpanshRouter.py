@@ -1,4 +1,4 @@
-#! /usr/bin/env python2
+#! /usr/bin/env python3
 
 import os
 import sys
@@ -9,9 +9,9 @@ import webbrowser
 import json
 import re
 import requests
-import Tkinter as tk
-import tkFileDialog as filedialog
-import tkMessageBox as confirmDialog
+import tkinter as tk
+import tkinter.filedialog as filedialog
+import tkinter.messagebox as confirmDialog
 from time import sleep
 from monitor import monitor
 from . import AutoCompleter

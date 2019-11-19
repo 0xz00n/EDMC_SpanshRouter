@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 
 import os
 import requests
@@ -23,7 +23,7 @@ class SpanshUpdater():
             r = requests.get(url)
             if r.status_code == 200:
                 with open(self.zip_path, 'wb') as f:
-                    print("Downloading SpanshRouter to " + self.zip_path)
+                    print(("Downloading SpanshRouter to " + self.zip_path))
                     f.write(os.path.join(r.content))
                 self.zip_downloaded = True
             else:

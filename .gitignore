@@ -4,3 +4,6 @@
 # Ignore compiles python files
 *.pyo
 *.pyc
+
+# vs code folder
+.vscode/

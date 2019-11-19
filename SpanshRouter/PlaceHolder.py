@@ -1,5 +1,5 @@
 from config import config
-from Tkinter import END
+from tkinter import END
 
 class PlaceHolder():
     def __init__(self, placeholder, **kw):

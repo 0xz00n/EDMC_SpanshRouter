@@ -1,14 +1,14 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 
 import threading
-import Queue
+import queue
 import json
 import os
 import requests
 import traceback
-from Tkinter import *
+from tkinter import *
 from time import sleep
-from PlaceHolder import PlaceHolder
+from .PlaceHolder import PlaceHolder
 
 class AutoCompleter(Entry, PlaceHolder):
     def __init__(self, parent, placeholder, **kw):
@@ -21,7 +21,7 @@ class AutoCompleter(Entry, PlaceHolder):
         self.lb = Listbox(self.parent, selectmode=SINGLE, **kw)
         self.lb_up = False
         self.has_selected = False
-        self.queue = Queue.Queue()
+        self.queue = queue.Queue()
 
         PlaceHolder.__init__(self, placeholder)
 
@@ -174,7 +174,7 @@ class AutoCompleter(Entry, PlaceHolder):
                 lista = self.queue.get_nowait()
                 self.show_results(lista)
                 self.update_idletasks()
-        except Queue.Empty:
+        except queue.Empty:
             pass
         self.after(100, self.update_me)
     
